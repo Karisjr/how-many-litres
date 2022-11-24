@@ -65,6 +65,11 @@ button {
     background: rgb(195, 9, 9);
 }
 
+#reminder {
+    font-size: small;
+    color: #dad6d6;
+}
+
 
   @keyframes animateSprite {
     0% {

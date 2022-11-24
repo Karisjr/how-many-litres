@@ -32,12 +32,20 @@ function decrement() {
 function save() {
     let countStr = count + " - "
     saveEl.textContent += countStr
-    count = 0
+    count = 1
     countEl.textContent = count
+
+    if (count == 1) {
+        decrementEl.disabled = true
+    } 
 }
 
 function reset() {
-    count = 0
+    count = 1
     countEl.textContent = count
     saveEl.textContent = "Amount from previous day: "
+
+    if (count == 1) {
+        decrementEl.disabled = true
+    } 
 }
