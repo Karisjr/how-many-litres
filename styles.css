@@ -53,6 +53,7 @@ button {
 
 #decrement-btn:disabled {
     background: #a9a8a8;
+    opacity: 0.8;
     text-decoration-line: line-through;
   }
 

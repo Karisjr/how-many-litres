@@ -1,6 +1,6 @@
 //1) Create a variable 'count' which will stater as '0'
 //3)change the count-el in the HTML to reflect the new count
-let count = 0;
+let count = 1;
 let countEl = document.getElementById("count-el")
 let saveEl = document.getElementById("save-el")
 let decrementEl = document.getElementById("decrement-btn")
@@ -12,21 +12,21 @@ function increment() {
     //3a)
     countEl.textContent = count
 //We do not want this count to go under 0
-    if (count > 0) {
+    if (count > 1) {
         decrementEl.disabled = false
     } 
 }
 
 //4) Now repeat but for decrement
 function decrement() {
-//We do not want this count to go under 0
-if (count == 0) {
-    decrementEl.disabled = true;
-    alert("You are required to drink at least 1litre a day.");
-    return
-}
+    //We do not want this count to go under 0
     count -= 1
     countEl.textContent = count
+
+    if (count <= 1) {
+        decrementEl.disabled = true;
+        return
+    }
 }
 
 function save() {
