@@ -3,7 +3,7 @@
 let count = 0;
 let countEl = document.getElementById("count-el")
 let saveEl = document.getElementById("save-el")
-let restEl = document.getElementById("reset-el")
+let decrementEl = document.getElementById("decrement-btn")
 
 //2) listen for 'onClicks' on the increment button - this is created within the HTML document on the button element
 function increment() {
@@ -11,10 +11,20 @@ function increment() {
     count += 1
     //3a)
     countEl.textContent = count
+//We do not want this count to go under 0
+    if (count > 0) {
+        decrementEl.disabled = false
+    } 
 }
 
 //4) Now repeat but for decrement
 function decrement() {
+//We do not want this count to go under 0
+if (count == 0) {
+    decrementEl.disabled = true;
+    alert("You are required to drink at least 1litre a day.");
+    return
+}
     count -= 1
     countEl.textContent = count
 }

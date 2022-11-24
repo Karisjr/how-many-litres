@@ -51,6 +51,11 @@ button {
     background: darkred;
 }
 
+#decrement-btn:disabled {
+    background: #a9a8a8;
+    text-decoration-line: line-through;
+  }
+
 #save-btn {
     background: rgb(2, 145, 2);
 }
